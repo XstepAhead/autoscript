@@ -1,10 +1,10 @@
 #!/bin/bash
-GITHUB_CMD="http://aa.cemilan-vpn.my.id:81/"
-wget -O /usr/bin/badvpn "${GITHUB_CMD}main/BadVPN-UDPWG/badvpn" >/dev/null 2>&1
+GITHUB_CMD="https://raw.githubusercontent.com/XstepAhead/autoscript/"
+wget -O /usr/bin/badvpn "${GITHUB_CMD}main/badvpn" >/dev/null 2>&1
 chmod +x /usr/bin/badvpn > /dev/null 2>&1
-wget -q -O /etc/systemd/system/badvpn1.service "${GITHUB_CMD}main/BadVPN-UDPWG/badvpn1.service" >/dev/null 2>&1
-wget -q -O /etc/systemd/system/badvpn2.service "${GITHUB_CMD}main/BadVPN-UDPWG/badvpn2.service" >/dev/null 2>&1
-wget -q -O /etc/systemd/system/badvpn3.service "${GITHUB_CMD}main/BadVPN-UDPWG/badvpn3.service" >/dev/null 2>&1
+wget -q -O /etc/systemd/system/badvpn1.service "${GITHUB_CMD}main/badvpn1.service" >/dev/null 2>&1
+wget -q -O /etc/systemd/system/badvpn2.service "${GITHUB_CMD}main/badvpn2.service" >/dev/null 2>&1
+wget -q -O /etc/systemd/system/badvpn3.service "${GITHUB_CMD}main/badvpn3.service" >/dev/null 2>&1
 systemctl disable badvpn1 
 systemctl stop badvpn1 
 systemctl enable badvpn1
